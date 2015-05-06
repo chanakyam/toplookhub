@@ -1,0 +1,5 @@
+-author("shree@ybrantdigital.com").
+-define(COUCHDB_URL, "http://couchdb.speakglobally.net/").
+-define(COUCHDB_VIDEO, "speakglobally/").
+-define(COUCHDB_TEXT_GRAPHICS, "wildridge_latest/").
+-define(NEWS_PER_PAGE, 10).

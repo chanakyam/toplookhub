@@ -1,0 +1,8 @@
+<footer>
+	<span class="right">
+    <a href="https://twitter.com/toplookhub" target="_blank"><img src="/images/twitter.png"></a>
+    <a href="https://www.facebook.com/toplookhub" target="_blank"><img src="/images/facebook.png"></a>   
+  	</span>
+    <summary> <span class="left">Copyright &copy;  {% now "Y" %}  Toplookhub. All Rights Reserved.</span> 
+     <!-- <span class="right"><span class="left margin5">Follow Us on:</span> <a href="#"><img src="images/facebook.png"></a> <a href="#"><img src="images/twitter.png"></a> <a href="#"><img src="images/linkdedin.png"></a> <a href="#"><img src="images/google.png"></a> </span>--> </summary>
+  </footer>

@@ -1,0 +1,75 @@
+    <aside class="sidebar">
+      <div class="rightad margin20_T">
+      <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=557677&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=213293"></script>
+      </div>
+      <!--<div class="fallow">
+        <div class="module-title">FOLLOW TECHNOLOGY NEWS</div>
+        <div class="Fallow-news"><a href="#"><img src="images/t-follow.png" alt=""></a> <a href="#"><img src="images/rss.png" alt=""></a> <a href="#"><img src="images/email-follow.png" alt=""></a> <a href="#"><img src="images/f-like.png" alt=""></a></div>
+      </div>-->
+
+      <!-- fallow end -->
+      <div class="politicsPictures margin20_T">
+        <div class="FieldLeft">
+        <h3>LATEST POLITICS 
+HEADLINES</h3>
+
+          <!--<div class="Rnewsdiv" ng-repeat="n in topEntertainmentNews">
+          <a ng-href="/n/{% verbatim %}{{ n.value.id }}{% endverbatim %}"><h4>{% verbatim %}{{ n.value.title }}{% endverbatim %}</h4></a>
+         <span class="postedon">{% verbatim %}{{ n.value.uploadedDate }}{% endverbatim %}</span></div>-->
+
+          {% for n in latestpoliticsheadlines %}
+          <div> <a href="/n/{{ n.id }}">{{ n.title }}</a><br>
+            <span class="small">{{ n.upload_date }}</span> </div>
+         {% endfor %}
+
+          <a href="/morepoliticsnews?p=1" class="more-fields">More Politics News</a> </div>
+        <!-- FieldLeft end -->
+        <div class="rightad2">
+          <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=160X600&cwpid=557677&cwwidth=160&cwheight=600&cwpnet=1&cwtagid=213292"></script>
+        </div> 
+        <span class="clear"></span>
+        
+
+        <!--<div class="rightmodules margin20_T">
+        <div class="red-title">MEDIAFILE</div>
+        <div class="module-inner">
+          <div class="row"> <span class="news-thumb"><img src="images/latest-thumb-01.jpg"></span> <span> <h3 class="mfg">How about <br>
+Hightail-ing it?</h3> <span class="smalldec mfg">by Silicon Valley startup YouSendIt. which began</span> </span> </div>
+          <div class="row"> <span class="news-thumb"><img src="images/latest-thumb-01.jpg"></span> <span> <h3 class="mfg">How about <br>
+Hightail-ing it?</h3> <span class="smalldec mfg">by Silicon Valley startup YouSendIt. which began</span> </span> </div>
+<div class="row"> <span class="news-thumb"><img src="images/latest-thumb-01.jpg"></span> <span> <h3 class="mfg">How about <br>
+Hightail-ing it?</h3> <span class="smalldec mfg">by Silicon Valley startup YouSendIt. which began</span> </span> </div>
+          
+        </div><a href="#" class="more-fields">More from MediaFile</a>
+      </div>-->
+
+
+      <!--<div class="rightmodules margin10_T">
+        <div class="red-title">POLITICS TWEETS</div>
+        <div class="module-inner">
+          <div class="row"> <span class="tweet-thumb"><img src="images/tweet-thumb.jpg"></span> <span class="ttg">RT @pewresearch: See a timeline that accompanies our survey on the most-closely followed stories of 2012 <a href="#">http://pewrsr.ch/VUms8x t. ...</a>
+by john.abell via twitter 12/31/2012 1:44:57 AM</span> </div>
+          
+        </div><a href="#" class="more-fields">» More on Twitter</a>
+      </div>-->
+
+
+      <div class="rightad margin10_T">
+        <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=557677&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=213293"></script>
+      </div>
+      
+      <!--<div class="rightmodules margin20_T">
+        <div class="red-title">MORE FROM Tech & The Internet</div>
+        <div class="module-inner techmod">
+          <div class="row"> <span class="news-thumb"><img src="images/tech-thumb.jpg"></span> <h3>Mexico monster truck accident kills 8, including kids, injures 79</h3> </div>
+          <div class="row"> <span class="news-thumb"><img src="images/tech-thumb.jpg"></span><h3>Mexico monster truck accident kills 8, including kids, injures 79</h3> </div>
+<div class="row"> <span class="news-thumb"><img src="images/tech-thumb.jpg"></span>  <h3>Mexico monster truck accident kills 8, including kids, injures 79</h3> </div>
+          
+        </div>
+      </div>-->
+
+
+        <span class="clear"></span> </div>
+      <!-- politicsPictures end --> 
+     
+    </aside>

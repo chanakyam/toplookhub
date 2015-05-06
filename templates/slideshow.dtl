@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Politics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" src="js/html5.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script src="/js/slides.min.jquery.js"></script>
+    <script src="/js/ui-bootstrap-tpls-0.6.0.js"></script>
+
+
+
+<style>
+      /* 
+  Resets defualt browser settings
+  reset.css
+*/
+
+
+
+#frame {
+  position:absolute;
+  z-index:0;
+  width:739px;
+  height:341px;
+  top:-3px;
+  left:-80px;
+}
+
+/*
+  Slideshow
+*/
+
+#slides {
+  top:15px;
+  left:4px;
+  z-index:100;
+}
+
+/*
+  Slides container
+  Important:
+  Set the width of your slides container
+  Set to display none, prevents content flash
+*/
+
+.slides_container {
+  width:630px;
+  overflow:hidden;
+  position:relative;
+  display:none;
+}
+
+/*
+  Each slide
+  Important:
+  Set the width of your slides
+  If height not specified height will be set by the slide content
+  Set to display block
+*/
+
+.slides_container div.slide {
+  width:570px;
+  height:370px;
+  display:block;
+}
+
+
+/*
+  Next/prev buttons
+*/
+
+#slides .next,#slides .prev {
+  position:absolute;
+  top:107px;
+  left:-39px;
+  width:24px;
+  height:43px;
+  display:block;
+  z-index:101;
+}
+
+#slides .next {
+  left:585px;
+}
+
+/*
+  Pagination
+*/
+
+.pagination {
+  margin:6px auto 0;
+  width:100px;
+}
+
+.pagination li {
+  float:left;
+  margin:0 1px;
+  list-style:none;
+}
+
+.pagination li a {
+  display:block;
+  width:12px;
+  height:0;
+  padding-top:12px;
+  background-image:url(../img/pagination.png);
+  background-position:0 0;
+  float:left;
+  overflow:hidden;
+}
+
+.pagination li.current a {
+  background-position:0 -12px;
+}
+
+/*
+  Caption
+*/
+
+.caption {
+  z-index:500;
+  position:absolute;
+  bottom:-35px;
+  left:0;
+  height:auto;
+  padding:5px 20px 0 20px;
+  background:#000;
+  background:rgba(0,0,0,.5);
+  width:104%;
+  font-size:1em;
+  line-height:1.33;
+  color:#fff;
+  border-top:1px solid #000;
+  text-shadow:none;
+}
+.blue-title{
+  width: 98.3%;
+}
+
+
+    </style>
+    
+    <script>
+    $(function(){
+      $('#slides').slides({
+        preload: true,
+        preloadImage: 'img/loading.gif',
+        play: 2000,
+        pause: 2500,
+        hoverPause: true,
+        pagination: {
+          active: true
+        },
+        animationStart: function(current){
+          $('.caption').animate({
+            bottom:-35
+          },100);
+        },
+        animationComplete: function(current){
+          $('.caption').animate({
+            bottom:0
+          },200);
+        },
+        slidesLoaded: function() {
+          $('.caption').animate({
+            bottom:0
+          },200);
+        }
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+<div class="container">
+    {% include "header.dtl" %}
+<!-- container end --> 
+<span class="clear"></span>
+<nav>
+  <div class="navcontainer">
+    <div class="menu"> <span>MENU</span>
+      <ul class="Navigation">
+        <li><a href="/" title="Home" class="active">Home</a> </li>
+       <!-- <li><a href="#" title="Elections">Elections</a></li>
+        <li><a href="#" title="Congress">Congress</a></li>
+        <li><a href="#" title="Blogs">Blogs</a></li>
+        <li><a href="#" title="policy">policy</a></li>
+        <li><a href="#" title="Video">Video</a></li>
+        <li><a href="#" title="Photos">Photos</a></li>
+        <li><a href="#" title="events">events</a></li>
+        <li><a href="#" title="Contact">Contact</a></li>-->
+      </ul>
+    </div>
+    <!-- menu end --> 
+  </div>
+  <span class="clear"></span> </nav>
+<div class="container">
+  <div class="ad1 padding20_T"><script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=557677&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=213294"></script></div>
+  <section class="contentarea padding20_T">
+ 
+    
+    <aside class="leftcontent">
+      <div>
+      <div class="blue-title">Slideshow</div>
+      <div id="slides">
+        <div class="slides_container">
+          <div class="slide">
+            <img src="http://img1.contentapi.ws/{{ firstslide.view_image }}" width="670" height="570" alt="Slide 1"></a>
+            <div class="caption" style="bottom:0">
+              <p>{{ firstslide.title }}</p>
+            </div>
+          </div>
+          {% for img in params %}
+
+          <div class="slide">
+            <img src="http://img1.contentapi.ws/{{ img.value.view_image }}" width="670" height="570" alt="Slide 1"></a>
+            <div class="caption" style="bottom:0">
+              <p>{{ img.value.title }}</p>
+            </div>
+          </div>
+          {% endfor %}                   
+        </div>
+    </div>
+  </div>
+  <span class="clear"></span>
+
+  <div class="module-title margin20_T">POLITICS NEWS IN PICTURES</div>
+  <div class="module padding10">
+        
+        <div class="news">       
+
+          {% for n in headlines %}
+
+          <div class="news-row">
+            <div class="newsthumb"><a href="/slideshow/{{ n.id }}"><img src="http://img1.contentapi.ws/{{ n.value.thumbnail }}"/></a></div>
+            <div class="news-right">
+              <h3><a href="/slideshow/{{ n.id }}">{{ n.value.title }}</a></h3><br>
+                <br>
+                <a href="#">Tech</a> <span class="small">{{ n.value.uploadedDate }}</span></p>
+            </div>
+          </div>
+
+          {% endfor %}
+          <!-- news-row end -->
+
+
+          
+         </div>
+        <span class="clear"></span> 
+      </div>
+    </aside>
+
+
+    <aside class="sidebar">
+      
+    
+
+      <!-- fallow end -->
+      <div class="politicsPictures margin20_T">
+
+        <!-- FieldLeft end -->
+        <div class="rightad2">
+          <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=160X600&cwpid=557677&cwwidth=160&cwheight=600&cwpnet=1&cwtagid=213292"></script>
+        </div> 
+        <span class="clear"></span>
+        <div class="rightad margin20_T">
+         <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=557677&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=213293"></script>
+        </div>
+        <span class="clear"></span>
+        <div class="rightad2">
+          <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=160X600&cwpid=557677&cwwidth=160&cwheight=600&cwpnet=1&cwtagid=213292"></script>
+        </div> 
+        <span class="clear"></span>
+        <div class="rightad margin20_T">
+          <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=557677&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=213293"></script>
+        </div>
+        
+        <!--<div class="rightmodules margin20_T">
+        <div class="red-title">MEDIAFILE</div>
+        <div class="module-inner">
+          <div class="row"> <span class="news-thumb"><img src="/images/latest-thumb-01.jpg"></span> <span> <h3 class="mfg">How about <br>
+Hightail-ing it?</h3> <span class="smalldec mfg">by Silicon Valley startup YouSendIt. which began</span> </span> </div>
+          <div class="row"> <span class="news-thumb"><img src="/images/latest-thumb-01.jpg"></span> <span> <h3 class="mfg">How about <br>
+Hightail-ing it?</h3> <span class="smalldec mfg">by Silicon Valley startup YouSendIt. which began</span> </span> </div>
+<div class="row"> <span class="news-thumb"><img src="/images/latest-thumb-01.jpg"></span> <span> <h3 class="mfg">How about <br>
+Hightail-ing it?</h3> <span class="smalldec mfg">by Silicon Valley startup YouSendIt. which began</span> </span> </div>
+          
+        </div><a href="#" class="more-fields">More from MediaFile</a>
+      </div>-->
+
+     <!-- <div class="rightmodules margin10_T">
+        <div class="red-title">POLITICS TWEETS</div>
+        <div class="module-inner">
+          <div class="row"> <span class="tweet-thumb"><img src="/images/tweet-thumb.jpg"></span> <span class="ttg">RT @pewresearch: See a timeline that accompanies our survey on the most-closely followed stories of 2012 <a href="#">http://pewrsr.ch/VUms8x t. ...</a>
+by john.abell via twitter 12/31/2012 1:44:57 AM</span> </div>
+          
+        </div><a href="#" class="more-fields">» More on Twitter</a>
+      </div>-->
+
+      <div class="rightad margin10_T"><script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=557677&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=213293"></script></div>
+      
+      <!--<div class="rightmodules margin20_T">
+        <div class="red-title">MORE FROM Tech & The Internet</div>
+        <div class="module-inner techmod">
+          <div class="row"> <span class="news-thumb"><img src="/images/tech-thumb.jpg"></span> <h3>Mexico monster truck accident kills 8, including kids, injures 79</h3> </div>
+          <div class="row"> <span class="news-thumb"><img src="/images/tech-thumb.jpg"></span><h3>Mexico monster truck accident kills 8, including kids, injures 79</h3> </div>
+<div class="row"> <span class="news-thumb"><img src="/images/tech-thumb.jpg"></span>  <h3>Mexico monster truck accident kills 8, including kids, injures 79</h3> </div>
+          
+        </div>
+      </div>-->
+
+        <span class="clear"></span> </div>
+      <!-- politicsPictures end --> 
+     
+    </aside>
+    <span class="clear"></span></section>
+  <div class="ad1 padding20_T"><script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=557677&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=213294"></script></div>
+  <footer>
+    <summary> <span class="left">Copyright &copy;  2013  Logo Name. All Rights Reserved | <a href="#">My Account</a>.</span> 
+     <!-- <span class="right"><span class="left margin5">Follow Us on:</span> <a href="#"><img src="/images/facebook.png"></a> <a href="#"><img src="/images/twitter.png"></a> <a href="#"><img src="/images/linkdedin.png"></a> <a href="#"><img src="/images/google.png"></a> </span>--> </summary>
+  </footer>
+</div>
+<!-- container end -->
+
+</body>
+</html>

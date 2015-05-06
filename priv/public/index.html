@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html ng-app="toplookhubApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Politics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/html5.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/controllers.js"></script>
+  <script src="http://vjs.zencdn.net/4.1/video.js"></script>
+  <script src="/js/ui-bootstrap-tpls-0.6.0.js"></script>
+</head>
+
+<body ng-controller="ToplookhubHome" ng-cloak>
+<div class="container">
+  <header> <a href="#" title="Sports News" class="logo left"><img src="images/logo.png" alt=""></a>
+    <div class="TopRight">
+     <!-- <p class="right"><span><a href="#">login</a></span><span>|</span><span><a href="#">Register</a></span></p>-->
+      <span class="clear"></span>
+      <form class="searchform">
+        <input type="text" name="search" class="search-box" />
+        <input type="submit" value="" name="" class="searchbutton">
+      </form>
+    </div>
+    <!-- TopRight end --> 
+    <span class="clear"></span> </header>
+    <nav>
+  <div class="navcontainer">
+    <div class="menu"> <span>MENU</span>
+      <ul class="Navigation">
+        <li> <a href="#" title="Home">Home</a> </li>
+       <!-- <li><a href="#" title="Elections">Elections</a></li>
+        <li><a href="#" title="Congress">Congress</a></li>
+        <li><a href="#" title="Blogs">Blogs</a></li>
+        <li><a href="#" title="policy">policy</a></li>
+        <li><a href="#" title="Video">Video</a></li>
+        <li><a href="#" title="Photos">Photos</a></li>
+        <li><a href="#" title="events">events</a></li>
+        <li><a href="#" title="Contact">Contact</a></li>-->
+      </ul>
+    </div>
+    <!-- menu end --> 
+  </div>
+  <span class="clear"></span> </nav>
+
+<!-- container end --> 
+<span class="clear"></span>
+  <div class="ad1 padding20_T"><img src="images/ad1.jpg" width="727" height="90" alt=""></div>
+  <section class="contentarea padding20_T">
+    <aside class="leftcontent">
+      <div class="slideshow"> <img src="images/slideshow-img.jpg" alt=""></div>
+      <!-- slideshow end -->
+      
+      <!--<div class="module margin20_T">
+        <h2 class="padding10">POLITICS VIDEO</h2>
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/news-thumb-01.jpg" alt=""> <span class="videotext"></span> </div>
+          <div class="description">Boehner: we're on the path to default <span class="small">(1:04) Insider US</span></div>
+        </div>
+    
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/news-thumb-01.jpg" alt=""> <span class="videotext"></span> </div>
+          <div class="description">Treasury Secretary warns of serious consequences of default <span class="small">(3:22) Agency</span></div>
+        </div>
+       
+        <div class="NewsDiv">
+          <div class="thumbdiv"><img src="images/news-thumb-01.jpg" alt=""> <span class="videotext"></span> </div>
+          <div class="description">Pentagon to recall most furloughed workers, easing shutdown pain <span class="small">(1:35) Agency</span></div>
+        </div>
+      
+        <span class="clear"></span> 
+      </div>-->
+      <!-- module end -->
+
+
+      <div class="module margin20_T padding10">
+        <h2 class="margin5_T">RECENT POLITICS NEWS</h2>
+        <div class="news">       
+
+
+          <div class="news-row" ng-repeat="n in topNewsWithImages">
+            <div class="newsthumb"><a href="/slideshow/{{ n.id }}"><img ng-src="http://img.contentapi.ws/{{ n.value.thumbnail }}"/></a></div>
+            <div class="news-right">
+              <h3><a href="/slideshow/{{ n.id }}">{{ n.value.title }}</a></h3><br>
+                <br>
+                <a href="#">Tech</a> <span class="small">{{ n.value.uploadedDate }}</span></p>
+            </div>
+          </div>
+          <!-- news-row end -->
+
+
+          
+         </div>
+        <span class="clear"></span> </div>
+      <!-- module end -->
+      
+      <!--
+      <div class="SponsersNews margin20_T">
+        <h2>Sponsored Links</h2>
+        <div class="Sp-NewsDiv">
+          <div class="s-thumb"><img src="images/s-thumb.jpg" width="120" height="90" alt=""></div>
+          <p>Revolting Facts About McDonald's Big Mac. Did…</p>
+        </div>
+      
+        <div class="Sp-NewsDiv">
+          <div class="s-thumb"><img src="images/s-thumb-02.jpg" width="120" height="90" alt=""></div>
+          <p>Follow these simple tips to lose weight and look…</p>
+        </div>
+      
+        <div class="Sp-NewsDiv">
+          <div class="s-thumb"><img src="images/s-thumb.jpg" width="120" height="90" alt=""></div>
+          <p>How to build muscle fast.</p>
+        </div>
+       
+        <div class="Sp-NewsDiv">
+          <div class="s-thumb"><img src="images/s-thumb-02.jpg" width="120" height="90" alt=""></div>
+          <p>Next Gen solutions for shocking muscle gains</p>
+        </div>
+       
+      </div>-->
+
+
+
+      <!-- SponsersNews end --> 
+    </aside>
+    <aside class="sidebar">
+      
+      <!--<div class="fallow">
+        <div class="module-title">FOLLOW TECHNOLOGY NEWS</div>
+        <div class="Fallow-news"><a href="#"><img src="images/t-follow.png" alt=""></a> <a href="#"><img src="images/rss.png" alt=""></a> <a href="#"><img src="images/email-follow.png" alt=""></a> <a href="#"><img src="images/f-like.png" alt=""></a></div>
+      </div>-->
+
+      <!-- fallow end -->
+      <div class="politicsPictures margin20_T">
+        <div class="FieldLeft">
+        <h3>LATEST POLITICS 
+HEADLINES</h3>
+
+          <!--<div class="Rnewsdiv" ng-repeat="n in topEntertainmentNews">
+          <a ng-href="/n/{{ n.value.id }}"><h4>{{ n.value.title }}</h4></a>
+         <span class="postedon">{{ n.value.uploadedDate }}</span></div>-->
+
+
+          <div ng-repeat="n in topPoliticsNews"> <a ng-href="/n/{{ n.value.id }}">{{ n.value.title }}</a><br>
+            <span class="small">{{ n.value.uploadedDate }}</span> </div>
+         
+
+          <a href="#" class="more-fields">More Politics News</a> </div>
+        <!-- FieldLeft end -->
+        <div class="rightad2"><img src="images/ad-160x600.jpg" alt=""></div> 
+        <span class="clear"></span>
+        <div class="rightad margin20_T"><img src="images/right-ad2.jpg" width="300" height="250" alt=""></div>
+        
+
+        <!--<div class="rightmodules margin20_T">
+        <div class="red-title">MEDIAFILE</div>
+        <div class="module-inner">
+          <div class="row"> <span class="news-thumb"><img src="images/latest-thumb-01.jpg"></span> <span> <h3 class="mfg">How about <br>
+Hightail-ing it?</h3> <span class="smalldec mfg">by Silicon Valley startup YouSendIt. which began</span> </span> </div>
+          <div class="row"> <span class="news-thumb"><img src="images/latest-thumb-01.jpg"></span> <span> <h3 class="mfg">How about <br>
+Hightail-ing it?</h3> <span class="smalldec mfg">by Silicon Valley startup YouSendIt. which began</span> </span> </div>
+<div class="row"> <span class="news-thumb"><img src="images/latest-thumb-01.jpg"></span> <span> <h3 class="mfg">How about <br>
+Hightail-ing it?</h3> <span class="smalldec mfg">by Silicon Valley startup YouSendIt. which began</span> </span> </div>
+          
+        </div><a href="#" class="more-fields">More from MediaFile</a>
+      </div>-->
+
+
+      <!--<div class="rightmodules margin10_T">
+        <div class="red-title">POLITICS TWEETS</div>
+        <div class="module-inner">
+          <div class="row"> <span class="tweet-thumb"><img src="images/tweet-thumb.jpg"></span> <span class="ttg">RT @pewresearch: See a timeline that accompanies our survey on the most-closely followed stories of 2012 <a href="#">http://pewrsr.ch/VUms8x t. ...</a>
+by john.abell via twitter 12/31/2012 1:44:57 AM</span> </div>
+          
+        </div><a href="#" class="more-fields">» More on Twitter</a>
+      </div>-->
+
+
+      <div class="rightad margin10_T"><img src="images/right-ad2.jpg" width="300" height="250" alt=""></div>
+      
+      <!--<div class="rightmodules margin20_T">
+        <div class="red-title">MORE FROM Tech & The Internet</div>
+        <div class="module-inner techmod">
+          <div class="row"> <span class="news-thumb"><img src="images/tech-thumb.jpg"></span> <h3>Mexico monster truck accident kills 8, including kids, injures 79</h3> </div>
+          <div class="row"> <span class="news-thumb"><img src="images/tech-thumb.jpg"></span><h3>Mexico monster truck accident kills 8, including kids, injures 79</h3> </div>
+<div class="row"> <span class="news-thumb"><img src="images/tech-thumb.jpg"></span>  <h3>Mexico monster truck accident kills 8, including kids, injures 79</h3> </div>
+          
+        </div>
+      </div>-->
+
+
+        <span class="clear"></span> </div>
+      <!-- politicsPictures end --> 
+     
+    </aside>
+    <span class="clear"></span></section>
+  <div class="ad1 padding20_T"><img src="images/ad1.jpg" width="727" height="90" alt=""></div>
+  <footer>
+    <summary> <span class="left">Copyright &copy;  2013  Logo Name. All Rights Reserved | <a href="#">My Account</a>.</span> 
+     <!-- <span class="right"><span class="left margin5">Follow Us on:</span> <a href="#"><img src="images/facebook.png"></a> <a href="#"><img src="images/twitter.png"></a> <a href="#"><img src="images/linkdedin.png"></a> <a href="#"><img src="images/google.png"></a> </span>--> </summary>
+  </footer>
+</div>
+<!-- container end -->
+
+</body>
+</html>
