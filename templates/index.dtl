@@ -39,7 +39,7 @@
   <div class="navcontainer">
     <div class="menu"> <span>MENU</span>
       <ul class="Navigation">
-        <li> <a href="/" title="Home">Home</a> </li>
+        <li> <a href="/" title="Home" class="active">Home</a> </li>
         <li> <a href="/morevideos" title="More videos">More Videos</a> </li>
         <!-- <li><a href="#" title="Elections">Elections</a></li>
         <li><a href="#" title="Congress">Congress</a></li>

@@ -22,7 +22,7 @@ HEADLINES</h3>
             <span class="small">{{ n.upload_date }}</span> </div>
          {% endfor %}
 
-          <a href="/morepoliticsnews?p=1" class="more-fields">More Politics News</a> </div>
+          <a href="/morepoliticsnews" class="more-fields">More Politics News</a> </div>
         <!-- FieldLeft end -->
         <div class="rightad2">
           <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=160X600&cwpid=557677&cwwidth=160&cwheight=600&cwpnet=1&cwtagid=213292"></script>

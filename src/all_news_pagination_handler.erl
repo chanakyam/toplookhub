@@ -23,10 +23,11 @@ terminate(_Reason, _Req, _State) ->
 
 %% API
 welcome(Req, State) ->
-	{PageBinary, PageNumber} = cowboy_req:qs_val(<<"p">>, Req),
-	PageNum = list_to_integer(binary_to_list(PageBinary)),
-	SkipItems = (PageNum-1) * ?NEWS_PER_PAGE,
- 	Url_Top_News = string:concat("http://api.contentapi.ws/news?channel=us_politics&limit=20&format=short&skip=", integer_to_list(SkipItems)),
+	% {PageBinary, PageNumber} = cowboy_req:qs_val(<<"p">>, Req),
+	% PageNum = list_to_integer(binary_to_list(PageBinary)),
+	% SkipItems = (PageNum-1) * ?NEWS_PER_PAGE,
+ 	% Url_Top_News = string:concat("http://api.contentapi.ws/news?channel=us_politics&limit=20&format=short&skip=", integer_to_list(SkipItems)),
+ 	Url_Top_News = "http://api.contentapi.ws/news?channel=us_politics&limit=20&format=short&skip=0",
 	% io:format("url--> ~p ~n",[Url_Top_News]),
 	
 	{ok, "200", _, ResponseAllNews} = ibrowse:send_req(Url_Top_News,[],get,[],[]),
