@@ -110,7 +110,7 @@ font-size: 15px;
       <div class="newsbody" style="text-align:justify;">
         <div class="module-title">{{ newsParam.title }}&nbsp;&nbsp;<span class="uploaded-date">-<script> document.write(epochToDate({{ newsParam.uploaded_date }})) </script></span></div>            
        {% if newsParam.thumb_image %}
-            <img src="http://img1.contentapi.ws/{{ newsParam.thumb_image }}" style="width: 260px;float: left;margin: 5px 10px;" alt="">          
+            <img src="http://newscdn.lycos.com/{{ newsParam.thumb_image }}" style="width: 260px;float: left;margin: 5px 10px;" alt="">          
       {% endif %}
 
     {{ newsParam.news_body }}

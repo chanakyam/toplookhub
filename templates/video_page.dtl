@@ -82,7 +82,7 @@
             <div class="gallery">
               <div class="videothumb">
                 <a href="/v/{{vid.id}}">
-                  <img width="100%" src="http://img1.contentapi.ws/{{vid.thumb_image}}" alt="{{vid.title}}"/>
+                  <img width="205px;" src="http://newscdn.lycos.com/world_news/{{vid.thumb_image}}" alt="{{vid.title}}"/>
                   <div class="video-overlay">
                     <span class="uploadedDate">{{vid.upload_date}}</span>
                     <span class="duration">{{vid.duration}}</span>

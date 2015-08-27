@@ -80,7 +80,7 @@
         <div class="news">
           {% for n in thumbs %}
           <div class="news-row">
-            <div class="newsthumb"><a href="/n/{{ n.id }}"><img src="http://img1.contentapi.ws/{{ n.thumb_image }}"/></a></div>
+            <div class="newsthumb"><a href="/n/{{ n.id }}"><img src="http://newscdn.lycos.com/{{ n.thumb_image }}"/></a></div>
             <div class="news-right">
               <h3><a href="/n/{{ n.id }}">{{ n.title }}</a></h3>
                 <p>{{ n.description }}</p>
